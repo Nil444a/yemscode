@@ -1,0 +1,168 @@
+
+        
+       <!DOCTYPE html>
+       <html lang="en">
+       <head>
+           <meta charset="UTF-8">
+           <meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>YEMS - Courses Section</title>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+           <style>
+                :root {
+            --primary: #4aa5e2;
+            --secondary: #50C878;
+            --background: #f5f7fa;
+            --text: #333;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+       
+               * {
+                   margin: 0;
+                   padding: 0;
+                   box-sizing: border-box;
+                   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+               }
+       
+               body {
+                   background-color: var(--background);
+                   color: var(--text);
+               }
+       
+               header {
+                   background-color: white;
+                   padding: 1rem;
+                   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+               }
+       
+               nav {
+                   max-width: 1200px;
+                   margin: 0 auto;
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+               }
+       
+               .logo {
+                   font-size: 1.5rem;
+                   font-weight: bold;
+                   color: var(--primary);
+               }
+       
+               .nav-links {
+                   display: flex;
+                   gap: 2rem;
+               }
+       
+               .nav-links a {
+                   text-decoration: none;
+                   color: var(--text);
+                   font-weight: 500;
+               }
+       
+               .section {
+                   background: white;
+                   border-radius: 8px;
+                   padding: 1.5rem;
+                   margin: 2rem auto;
+                   max-width: 800px;
+                   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+               }
+       
+               .course-list {
+                   display: grid;
+                   gap: 1rem;
+               }
+       
+               .course-card {
+                   background: white;
+                   border: 1px solid #eee;
+                   border-radius: 8px;
+                   padding: 1rem;
+                   transition: transform 0.2s;
+               }
+       
+               .course-card:hover {
+                   transform: translateY(-4px);
+               }
+       
+               .button {
+                   background: var(--primary);
+                   color: white;
+                   border: none;
+                   padding: 0.5rem 1rem;
+                   border-radius: 4px;
+                   cursor: pointer;
+                   font-size: 0.9rem;
+                   margin-top: 1rem;
+               }
+       
+               .button:hover {
+                   opacity: 0.9;
+               }
+       
+               .course-details {
+                   display: flex;
+                   justify-content: space-between;
+                   align-items: center;
+                   margin-top: 0.5rem;
+               }
+           </style>
+       </head>
+       <body>
+           <header>
+               <nav>
+                   <div class="logo">YEMS - Youth Management System</div>
+                   <div class="nav-links">
+                       <a href="coursesyems.html">Courses</a>
+                       <a href="advanced-learning-platform (1).html">Dashboard</a>
+                       <a href="yems-profile.html">Profile</a>
+                <a href="LEADERS-BOARD.html">Leadersboard</a>
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                   </div>
+               </nav>
+           </header>
+       
+           <main>
+               <section id="courses" class="section">
+                   <h2>Recommended Courses</h2>
+                   <div class="course-list">
+                       <div class="course-card">
+                           <h3>coperate communications</h3>
+                           <div class="course-details">
+                               <p>TechEd Academy</p>
+                               <p>Skill Level: Intermediate</p>
+                           </div>
+                           <button class="button">Enroll Now</button>
+                           <a href="game coperate com.html">Courses</a>
+                       </div>
+                       <div class="course-card">
+                           <h3>Python Programming Masterclass</h3>
+                           <div class="course-details">
+                               <p>CodeMaster Institute</p>
+                               <p>Skill Level: Beginner to Advanced</p>
+                           </div>
+                           <button class="button">Enroll Now</button>
+                       </div>
+                       <div class="course-card">
+                           <h3>Data Science and Machine Learning</h3>
+                           <div class="course-details">
+                               <p>AI Learning Center</p>
+                               <p>Skill Level: Advanced</p>
+                           </div>
+                           <button class="button">Enroll Now</button>
+                       </div>
+                   </div>
+               </section>
+           </main>
+       
+           <script>
+               document.querySelectorAll('.button').forEach(button => {
+                   button.addEventListener('click', () => {
+                       alert('Enrollment feature coming soon!');
+                   });
+               });
+           </script>
+       </body>
+       </html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YEMS Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .leaderboard {
+            width: 90%;
+            max-width: 600px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .leaderboard h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1b97b6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #e2e2e2;
+            color: #1c88cf;
+        }
+
+        tr:nth-child(even) {
+            background: #1693b9;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="leaderboard">
+        <h2>YEMS Leaderboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="leaderboardBody">
+                <!-- Leaderboard data will be inserted here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Placeholder data
+        const participants = [
+            { name: "Ali", score: 120 },
+            { name: "Aisha", score: 200 },
+            { name: "Mohamed", score: 150 },
+            { name: "Fathimath", score: 180 },
+            { name: "Hassan", score: 90 }
+        ];
+
+        // Sort participants by score in descending order
+        participants.sort((a, b) => b.score - a.score);
+
+        // Populate the leaderboard
+        const leaderboardBody = document.getElementById('leaderboardBody');
+
+        participants.forEach((participant, index) => {
+            const row = document.createElement('tr');
+
+            // Highlight top 3 participants
+            if (index < 3) {
+                row.classList.add('highlight');
+            }
+
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td>${participant.name}</td>
+                <td>${participant.score}</td>
+            `;
+
+            leaderboardBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

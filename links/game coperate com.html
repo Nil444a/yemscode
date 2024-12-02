@@ -1,0 +1,94 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperative Communications Challenge</title>
+    <style>
+         :root {
+            --primary: #4aa5e2;
+            --secondary: #50C878;
+            --background: #f5f7fa;
+            --text: #333;
+            --shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f2f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .scenario {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .feedback {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #e0ffe0;
+            border: 1px solid #d0d0d0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cooperative Communications Challenge</h1>
+        <div class="scenario">
+            <h2>Scenario: Team Brainstorming Session</h2>
+            <p>Choose the most effective communication tool for this brainstorming session.</p>
+            <button class="button" onclick="showFeedback('chat')">Chat</button>
+            <button class="button" onclick="showFeedback('voice')">Voice Note</button>
+            <button class="button" onclick="showFeedback('video')">Video Call</button>
+            <button class="button" onclick="showFeedback('doc')">Collaborative Document</button>
+        </div>
+        <div class="feedback" id="feedback">
+            <p id="feedback-text"></p>
+        </div>
+    </div>
+
+    <script>
+        function showFeedback(tool) {
+            const feedbackElement = document.getElementById('feedback');
+            const feedbackText = document.getElementById('feedback-text');
+
+            if (tool === 'chat') {
+                feedbackText.textContent = 'Good choice! Chat is great for quick, clear communication and real-time updates.';
+            } else if (tool === 'voice') {
+                feedbackText.textContent = 'Voice notes allow for nuanced communication but may not be as quick as chat.';
+            } else if (tool === 'video') {
+                feedbackText.textContent = 'Video calls are excellent for discussions, but ensure everyone has good connectivity.';
+            } else if (tool === 'doc') {
+                feedbackText.textContent = 'Collaborative documents are ideal for detailed planning but may need live follow-ups.';
+            }
+
+            feedbackElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
